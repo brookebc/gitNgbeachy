@@ -7,4 +7,12 @@ angular.module('gitNgbeachyApp')
       'AngularJS',
       'Karma'
     ];
-  });
+  })
+
+.controller("SimpleMapController", [ '$scope', function($scope) {
+    angular.extend($scope, {
+        defaults: {
+            scrollWheelZoom: false
+        }
+    });
+}]);
