@@ -12,11 +12,14 @@ angular.module('gitNgbeachyApp')
 .controller('MapCtrl', ['$scope', 'leafletEvents', function($scope, leafletEvents) {
 
 		angular.extend($scope, {
-	        center: {
-		        lat: 32.907,
-		        lng: -79.802,
-		        zoom: 9
-       		},
+            center: {
+                    autoDiscover: true
+                },
+	        // center: {
+		       //  lat: 32.907,
+		       //  lng: -79.802,
+		       //  zoom: 9
+       		// },
 			defaults: {
 	            scrollWheelZoom: false
 	        },
@@ -29,12 +32,12 @@ angular.module('gitNgbeachyApp')
                         charleston: {
                         	lat: 32.907,
                         	lng: -79.802,
-                        	message: "Chucktown",
+                        	message: "Chucktown"
                         },
                         iopbeach: {
                             lat: 32.79639,
                             lng: -79.765,
-                      		message: "Isle of Palms Beach",
+                      		message: "Isle of Palms Beach"
                         }
                     }
                 });
@@ -61,6 +64,3 @@ angular.module('gitNgbeachyApp')
 
             //$scope.addMarkers();
         }]);
-	
-
-  

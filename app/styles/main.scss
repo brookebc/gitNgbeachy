@@ -2,9 +2,23 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
-#map { 
-    height: 180px; 
+.angular-leaflet-map { 
+    min-height: 480px;
+    width:640px;
 }
+
+.red {
+    border-radius: 120px;
+    opacity: .75;
+    background-color: #FF0000;
+}
+
+.blue {
+    border-radius: 120px;
+    opacity: .75;
+    background-color: #0000FF;
+}
+
 
 .browsehappy {
     margin: 0.2em 0;

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gitNgbeachyApp')
-  .controller('MainCtrl', function ($scope) {
+.controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -9,33 +9,44 @@ angular.module('gitNgbeachyApp')
     ];
   })
 
-.controller('MapCtrl', ['$scope', 'leafletEvents', function($scope, leafletEvents) {
-
-		angular.extend($scope, {
-	        center: {
+.controller('MapCtrl', [ '$scope', '$http', 'leafletEvents', function($scope, $http, leafletEvents) {
+    angular.extend($scope, {
+        center: {
 		        lat: 32.907,
 		        lng: -79.802,
 		        zoom: 9
-       		},
-			defaults: {
-	            scrollWheelZoom: false
-	        },
-	    	markers: {}
-       		});
+        },
+        defaults: {
+            scrollWheelZoom: false
+        },
+        markers: {},
+        layers: {
+		  baselayers: {
+		    openstreetmap: {
+		      name: 'OpenStreetMap (XYZ)',
+		      type: 'xyz',
+		      url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+		      layerParams: {},
+		      layerOptions: {}
+		  		}
+		    },
+			overlays: {
+				beaches: {
+	            	name:'Beaches',
+	            	type: 'markercluster',
+	            	url:'/app/scripts/beachmarkers.js',
+	            	visible: true,
+	            	layerOptions: {},
+	            	layerParams: {}     	
+	                }
+				}
+		}
+    });
 
-            $scope.addMarkers = function() {
+    $scope.addMarkers = function() {
                 angular.extend($scope, {
                     markers: {
-                        charleston: {
-                        	lat: 32.907,
-                        	lng: -79.802,
-                        	message: "Chucktown",
-                        },
-                        iopbeach: {
-                            lat: 32.79639,
-                            lng: -79.765,
-                      		message: "Isle of Palms Beach",
-                        }
+                 
                     }
                 });
             };
@@ -64,3 +75,6 @@ angular.module('gitNgbeachyApp')
 	
 
   
+
+
+   

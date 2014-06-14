@@ -13,12 +13,13 @@
   <div>
   <h4>Beaching Time</h4>
   <button ng-click="addMarkers()">Beach Me</button>
+  <button ng-click="center.autoDiscover=true">Discover position</button>
   
 </div>
 <div>
 	<h4>This is where the map will go</h4>
 
-  <leaflet height="480px" width="640px" center="center" markers="markers"></leaflet>
+  <leaflet center="center" markers="markers"></leaflet>
 
 </div>
 
