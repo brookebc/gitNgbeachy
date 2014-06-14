@@ -10,14 +10,15 @@
 </div>
 
 <div class="row marketing">
-  <div class="col-lg-6">
+  <div>
   <h4>Beaching Time</h4>
+  <button ng-click="addMarkers()">Beach Me</button>
   
 </div>
-<div class="col-lg-6" id="map">
+<div>
 	<h4>This is where the map will go</h4>
 
-  <leaflet height="480px" width="640px"></leaflet>
+  <leaflet height="480px" width="640px" center="center" markers="markers"></leaflet>
 
 </div>
 

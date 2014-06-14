@@ -6,7 +6,6 @@ angular.module('gitNgbeachyApp', [
   'ngSanitize',
   'ngRoute',
   'leaflet-directive'
- 
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -16,9 +15,9 @@ angular.module('gitNgbeachyApp', [
       })
       .when('/map', {
         templateUrl: 'views/mapview.html',
-        controller: 'SimpleMapController'
+        controller: 'MapCtrl'
       })
       .otherwise({
         redirectTo: '/'
-      })
-  });
+      });
+});
