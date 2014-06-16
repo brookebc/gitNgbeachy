@@ -4,26 +4,29 @@
     <li><a ng-href="#">Home</a></li>
     <li><a ng-href="#">About</a></li>
     <li><a ng-href="#">Contact</a></li>
-    <li class="active"><a ng-href="#/map">Map</a></li>
-    <li><a ng-href="#/geo">Find Ya</a></li>
+    <li><a ng-href="#/map">Map</a></li>
+    <li class="active"><a ng-href="#/geo">Find Ya</a></li>
   </ul>
   <h3 class="text-muted">gitNgbeachy</h3>
 </div>
 
+  <div ng-controller="geoCtrl">
 <div class="row marketing">
   <div>
   <h4>Beaching Time</h4>
   <!-- <button ng-click="addMarkers()">Beach Me</button> -->
   <!-- <button ng-click="center.autoDiscover=true">Discover position</button> -->
-  <!-- <button ng-click="findMe()">Find Me</button> -->
+  <!-- <button ng-click="getLocation()">Find Me</button> -->
   <div>
-    <!-- <p>Your Location:{{coords}}</p> -->
+    <p>Your location is: {{center.lat}},{{center.lng}} </p>
   </div>
 </div>
 <div>
-	<h4>This is where the map will go</h4>
+  <h4>This is where the map will go</h4>
 
-  <leaflet></leaflet>
+   <leaflet center="center"></leaflet>
+    
+  </div>
 
 </div>
 

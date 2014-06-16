@@ -10,12 +10,19 @@ angular.module('gitNgbeachyApp')
   })
 
 .controller('MapCtrl', [ '$scope', '$http', 'leafletEvents', function($scope, $http, leafletEvents) {
+
+    // geolocation.getLocation().then(function(data){
+    //   $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};  
+    //   console.log($scope.coords);  
+
+    // });
     angular.extend($scope, {
-        center: {
-		        lat: 32.907,
-		        lng: -79.802,
-		        zoom: 9
-        },
+            center: {
+                lat: 32.907,
+                lng: -79.802,
+                zoom: 9
+            },
+    
         defaults: {
             scrollWheelZoom: false
         },
