@@ -14,13 +14,13 @@ angular.module('gitNgbeachyApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      // .when('/map', {
-      //   templateUrl: 'views/mapview.html',
-      //   controller: 'MapCtrl'
-      // })
+      .when('/map', {
+        templateUrl: 'views/mapview.html',
+        controller: 'MapCtrl'
+      })
       .when('/geo', {
         templateUrl: 'views/geolocate.html',
-        // controller: 'geoCtrl'
+        controller: 'geoCtrl'
       })
       .otherwise({
         redirectTo: '/'

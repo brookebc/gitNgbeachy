@@ -10,6 +10,7 @@ angular.module('gitNgbeachyApp')
   })
 
   .controller('geoCtrl', [ '$scope', 'geolocation', function ($scope,geolocation) {
+    
     $scope.center = {
     	lat: 38.8833,
 	    lng: -77.0167,
@@ -22,10 +23,26 @@ angular.module('gitNgbeachyApp')
     			lat: data.coords.latitude, 
     			lng: data.coords.longitude, 
     			zoom: 12
-    		};  
-      
-      console.log($scope.center);
+    			}
+    		
+    		
+    		console.log($scope.center);
 
-    });
+    		 });
+    		
+    		// $scope.addMarkers = function() {
+      //           $scope.markers: {
+	     //                    center: {
+	     //                        lat: data.coords.latitude,
+	     //                        lng: data.coords.longitude,
+	     //                        message: "There you are!",
+	     //                    }   
+      //               }
+      //           });
+      //       };
+
+     
+
+   
 
   }]);

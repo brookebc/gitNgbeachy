@@ -9,35 +9,12 @@ angular.module('gitNgbeachyApp')
     ];
   })
 
-.controller('MapCtrl', ['$scope', 'leafletEvents', function($scope, leafletEvents, $window) {
-        // $scope.myPosition = {
-        //     lat: '',
-        //     lng: ''
-        // };
-        $window.navigator.geolocation.getCurrentPosition(function(position){
-                // var lat = ;
-                // var lng = position.coords.longitude;
-                $scope.$apply = (function(){
-                    $scope.myPosition = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                        zoom: 12
-                    };
-                    
-                })
-            });
-        $scope.findMe = function() {
-            
- console.log($scope.myPosition);       
-        };
-
-
+.controller('MapCtrl', ['$scope', 'leafletEvents', function($scope, leafletEvents) {
+   
 		angular.extend($scope, {
-            myPosition: {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-                zoom: 14
-            },	
+             center: {
+                    autoDiscover: true
+                },
 			defaults: {
 	            scrollWheelZoom: false
 	        },
@@ -56,18 +33,11 @@ angular.module('gitNgbeachyApp')
                             lat: 32.79639,
                             lng: -79.765,
                       		message: "Isle of Palms Beach"
-                        },  
-                         user: {
-                            lat: $scope.myPosition.lat,
-                            lng: $scope.myPosition.lng,
-                            message: "Here you are!"
-                        },
+                        }
                     }
                 });
 
             };
-
-           
 
             $scope.events = {
                 markers: {

@@ -10,25 +10,24 @@
   <h3 class="text-muted">gitNgbeachy</h3>
 </div>
 
-  <div ng-controller="geoCtrl">
-<div class="row marketing">
-  <div>
+
+<div class="row marketing col-lg-6">
+ 
   <h4>Beaching Time</h4>
   <!-- <button ng-click="addMarkers()">Beach Me</button> -->
-  <!-- <button ng-click="center.autoDiscover=true">Discover position</button> -->
+ 
   <!-- <button ng-click="getLocation()">Find Me</button> -->
-  <div>
+ 
     <p>Your location is: {{center.lat}},{{center.lng}} </p>
-  </div>
+  
 </div>
-<div>
+<div class="col-lg-6">
   <h4>This is where the map will go</h4>
 
-   <leaflet center="center"></leaflet>
+  <leaflet center="center" markers="markers"></leaflet>
     
-  </div>
-
 </div>
+
 
 <div class="footer">
   <p>♥ By Brooke Casey</p>
