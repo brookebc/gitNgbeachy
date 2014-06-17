@@ -79,12 +79,23 @@ angular.module('gitNgbeachyApp')
 
             <!-- end of markers and map data -->
 
-        $scope.beachdata = {};
+        $scope.getbeachdata = function(){
         $http.get("scripts/beachdata.geojson").success(function(data) {
-			console.log(data);
+        	$scope.beachdata = data;
+			console.log($scope.beachdata);
 
-	  	$scope.beachdata = data;
-	  		console.log($scope.beachdata);
+			console.log($scope.beachdata.features.length);
+			console.log($scope.beachdata.features[0].properties.title);
+			// console.log($scope.beachdata.features[0].type);
+
+			});
+		};
+
+		}]);
+			// console.log(beachPoints);
+
+	  	// var beachdata = data;
+	  	// 	console.log(beachdata[0].type);
 
 	  	// angular.extend($scope, {
     //     	  	geojson: {
@@ -111,9 +122,9 @@ angular.module('gitNgbeachyApp')
 
        			// };
      
-              });
+              // });
 
-          }]);
+          
   
 
 

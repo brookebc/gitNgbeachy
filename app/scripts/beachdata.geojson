@@ -1,5 +1,5 @@
-
- [
+{ "type": "FeatureCollection",
+    "features": [
  	{
     "type": "Feature",
     "properties": {
@@ -144,7 +144,8 @@
       		"coordinates": [-79.0611,33.5139]
 		}
 	}
-];
+]
+}
 
 	
 	

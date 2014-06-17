@@ -8,6 +8,31 @@ angular.module('gitNgbeachyApp')
     		console.log('success!');
     		console.log(data);
 
+    		var forecastdata = data;
+
+    		// window.reviewdata = data;
+          
+    		console.log(forecastdata);
+    		console.log(forecastdata.data.weather);
+
+    		var todaysWeather = forecastdata.data.weather;
+    		console.log(todaysWeather.length);
+    		console.log(todaysWeather[0].hourly[0]);
+
+    		// var html= '';
+      //     	for (var i = 0; i < forecastdata.data.weather.length.hourly; i++){
+          
+      //     	html += '<h3>'+ forecastdata.data.weather.hourly.cloudcover + "</h3><br>";
+          	
+      //   		$(".weatherhere").html(html);
+      //   	};
+
+
+    		// var forecast = forecastdata.data.weather.hourly;
+
+    		// var forecast = {};
+
+    		// console.log(forecast);
     	}).
     	error(function(data, status) {
     		console.log('there was an error getting the weather data' + error);
