@@ -5,17 +5,18 @@ angular.module('gitNgbeachyApp')
 
 		$http({method: 'GET', url: 'http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json'}).
     	success(function(data, status) {
-    		console.log('success!');
-    		console.log(data);
+    		// console.log('success!');
+    		// console.log(data);
+    		$scope.forecastdata = data;
+    		// console.log($scope.forecastdata);
 
-    		var forecastdata = data;
-          
-    		console.log(forecastdata);
-    		console.log(forecastdata.data.weather);
+    		// console.log($scope.forecastdata.data.weather[0].hourly);
 
-    		var todaysWeather = forecastdata.data.weather;
-    		console.log(todaysWeather.length);
-    		console.log(todaysWeather[0].hourly[0]);
+    		$scope.todaysweather = $scope.forecastdata.data.weather[0].hourly
+    		
+    		console.log($scope.todaysweather);
+
+    		return $scope.todaysweather;
 
     	}).
     	error(function(data, status) {

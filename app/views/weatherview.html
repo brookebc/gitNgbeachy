@@ -8,11 +8,15 @@
 </div>
 
 <div class="row marketing">
-	
+
   <h4>Weather Time</h4>
   <button ng-click="getWeather()">Get Weather</button>
 
 	<p class="weatherhere"> put the weather here</p>
+
+	<ul ng-repeat="today in todaysweather">
+        <li>{{today.humidity}}</li>
+    </ul>
 </div>
 
 <div class="footer">

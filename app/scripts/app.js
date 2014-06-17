@@ -20,7 +20,7 @@ angular.module('gitNgbeachyApp', [
         controller: 'geoCtrl'
       })
       .when('/weather', {
-        templateUrl: 'views/waterview.html',
+        templateUrl: 'views/weatherview.html',
         controller: 'weatherCtrl'
       })
       .otherwise({
