@@ -17,6 +17,10 @@
     <div class="beacheshere">
       <button ng-click="getbeachdata()">Add Beach Data</button>
       <p> beach names shall be listed here</p>
+      <h3>Beach Data from my beaches file- unfiltered for location</h3>
+      <ul ng-repeat="beach in beachready">
+        <li>{{beach.properties.title}}</li>
+      </ul>
 
     </div>
     <div>
@@ -26,7 +30,8 @@
       <h2>Hardcoded charleston weather</h2>
 
       <ul ng-repeat="today in todaysweather">
-        <li>Hourly humidity: {{ today.time | date:'shortTime'}} - {{today.humidity}}</li>
+        <li><h3>{{today.time|date:'shortTime'}}</h3></li>
+        <li>Hourly humidity: {{today.humidity}}</li>
         <li>Air temperature: {{today.tempF}}</li>
         <li>Expected wave height in meters: {{today.swellHeight_m}}
         <li>Water temperature: {{today.waterTemp_F}}</li>

@@ -79,7 +79,11 @@ angular.module('gitNgbeachyApp')
 			console.log($scope.beachdata.features.length);
 			console.log($scope.beachdata.features[0].properties.title);
 
-			return $scope.beachdata;
+			$scope.beachready = $scope.beachdata.features;
+
+			console.log($scope.beachready);
+
+			return $scope.beachready;
 
 			});
 		};
