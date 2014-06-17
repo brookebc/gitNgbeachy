@@ -3,11 +3,15 @@
 angular.module('gitNgbeachyApp')
 
 //    		// $scope.weatherdata = {};
-.factory('weatherService', function($resource){
+.factory('weatherService', ['$resource', '$http', '$q', function($resource, $http, $q){
+	
+
 	return $resource('http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json',
 		{},
 		{
-			showWeather: { method: 'GET'}	
+			getWeather: { method: 'GET',
+			isArray: true
+		}	
 		});
 	});
    	
@@ -18,3 +22,13 @@ angular.module('gitNgbeachyApp')
 // 			}
 
 // }]);
+
+  // $http({method: 'GET', url: '/someUrl'}).
+    // success(function(data, status, headers, config) {
+      // this callback will be called asynchronously
+      // when the response is available
+    // }).
+    // error(function(data, status, headers, config) {
+      // called asynchronously if an error occurs
+      // or server returns response with an error status.
+    // });
