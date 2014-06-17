@@ -1,19 +1,22 @@
 'use strict';
 
-angular.module('gitNgbeachyApp')
-
-//    		// $scope.weatherdata = {};
-.factory('weatherService', ['$resource', '$http', '$q', function($resource, $http, $q){
-	
-
-	return $resource('http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json',
-		{},
+	angular.module('gitNgbeachyApp')	
+.factory('GeoJSON', function($resource) {
+	return $resource('scripts/beachdata.geo.json',{}, 
 		{
-			getWeather: { method: 'GET',
-			isArray: true
-		}	
-		});
-	});
+			get: { method: 'GET'}
+		})
+});
+ 
+ // .factory('weatherService', ['$resource', '$http', '$q', function($resource, $http, $q){
+	// return $resource('http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json',
+	// 	{},
+	// 	{
+	// 		getWeather: { method: 'GET',
+	// 		isArray: true
+	// 	}	
+	// 	});
+	// });
    	
 // 	$scope.someWeather = {};
 // 		$http.get('http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json').success(function(data, status) {
