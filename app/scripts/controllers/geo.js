@@ -31,31 +31,61 @@ angular.module('gitNgbeachyApp')
     		 });
     		
     	$scope.addMarkers = function() {
+
+    		
+    		 var icons = {
+                blue: {
+                    type: 'div',
+                    iconSize: [20, 20],
+                    className: 'blue',
+                    iconAnchor:  [5, 5]
+                },
+                red: {
+                    type: 'div',
+                    iconSize: [10, 10],
+                    className: 'red',
+                    iconAnchor:  [5, 5]
+                },
+                yellow: {
+                    type: 'div',
+                    iconSize: [10, 10],
+                    className: 'yellow',
+                    iconAnchor:  [5, 5]
+                }
+            }
+
             angular.extend($scope, {
             	markers: {
                 	charleston: {
                 		lat: 32.907,
                 		lng: -79.802,
-                		message: "Chucktown"
+                		message: "Chucktown",
+                		icon: icons.blue
                 	},
                 	iopbeach: {
                     	lat: 32.79639,
                     	lng: -79.765,
-              			message: "Isle of Palms Beach"
+              			message: "Isle of Palms Beach",
+              			icon: icons.blue
                 	},
                 	user: {
                     	lat: $scope.center.lat,
                     	lng: $scope.center.lng,
-              			message: "Here you are!"   
+              			message: "Here you are!",
+              			icon: icons.red   
                 	}
                 },
                 geojson: {
-                data: testData,
-                style: {
-                    weight: 2,
-                    color: '#666',
-                    fillColor: 'white'
-                }
+	                data: testData,
+	                style: {
+	                    weight: 2,
+	                    color: '#666',
+	                    fillColor: 'white'
+	                    // icon: icon.yellow
+                },
+                onEachFeature: function (feature, layer) {
+        			layer.bindPopup(feature.properties.description);
+    }
             }
             });
         };
