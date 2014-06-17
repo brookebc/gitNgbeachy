@@ -1,14 +1,6 @@
 'use strict';
 
 angular.module('gitNgbeachyApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  })
-
   .controller('geoCtrl', [ '$scope', 'geolocation', 'leafletEvents', '$http', function ($scope, geolocation, leafletEvents, $http) {
     
     angular.extend($scope, {
@@ -86,43 +78,14 @@ angular.module('gitNgbeachyApp')
 
 			console.log($scope.beachdata.features.length);
 			console.log($scope.beachdata.features[0].properties.title);
-			// console.log($scope.beachdata.features[0].type);
+
+			return $scope.beachdata;
 
 			});
 		};
 
 		}]);
-			// console.log(beachPoints);
 
-	  	// var beachdata = data;
-	  	// 	console.log(beachdata[0].type);
-
-	  	// angular.extend($scope, {
-    //     	  	geojson: {
-    //     	  		'name': feature.properties.name,
-    //     	  		'latlng': geometry.coordinates
-    //     	  	}
-    //     	  })
-
-        // for ( var i = 0; i < $scope.beachdata.length; i++) {
-        	 
-        // 	};
-
-        	 //  var beach = {
-        	 // 	'name': beachPoints.properties.name
-        	 //  };
-        	
-        
-        	 // 	  console.log(beach.name);
-
-        	 	// $('.addbeaches').on('click', function(){
-
-        	 	// 	('.beacheshere').append(beachdata);
-        	 	// });
-
-       			// };
-     
-              // });
 
           
   

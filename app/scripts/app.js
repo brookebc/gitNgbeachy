@@ -15,15 +15,11 @@ angular.module('gitNgbeachyApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/map', {
-        templateUrl: 'views/mapview.html',
-        controller: 'MapCtrl'
-      })
       .when('/geo', {
         templateUrl: 'views/geolocate.html',
         controller: 'geoCtrl'
       })
-      .when('/water', {
+      .when('/weather', {
         templateUrl: 'views/waterview.html',
         controller: 'weatherCtrl'
       })
