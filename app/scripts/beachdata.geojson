@@ -1,4 +1,5 @@
-var beachPoints = [
+
+ [
  	{
     "type": "Feature",
     "properties": {
@@ -144,6 +145,7 @@ var beachPoints = [
 		}
 	}
 ];
+
 	
 	
 	

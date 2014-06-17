@@ -9,7 +9,7 @@ angular.module('gitNgbeachyApp')
     ];
   })
 
-  .controller('geoCtrl', [ '$scope', 'geolocation', 'leafletEvents', function ($scope, geolocation, leafletEvents) {
+  .controller('geoCtrl', [ '$scope', 'geolocation', 'leafletEvents', '$http', function ($scope, geolocation, leafletEvents, $http) {
     
     angular.extend($scope, {
    		center : {
@@ -75,7 +75,49 @@ angular.module('gitNgbeachyApp')
 
         $scope.removeMarkers = function() {
                 $scope.markers = {};
-            }
+            } //end of user and markers on map
+
+            <!-- end of markers and map data -->
+
+        $scope.beachdata = {};
+        $http.get("scripts/beachdata.geojson").success(function(data) {
+			console.log(data);
+
+	  	$scope.beachdata = data;
+	  		console.log($scope.beachdata);
+
+	  	// angular.extend($scope, {
+    //     	  	geojson: {
+    //     	  		'name': feature.properties.name,
+    //     	  		'latlng': geometry.coordinates
+    //     	  	}
+    //     	  })
+
+        // for ( var i = 0; i < $scope.beachdata.length; i++) {
+        	 
+        // 	};
+
+        	 //  var beach = {
+        	 // 	'name': beachPoints.properties.name
+        	 //  };
+        	
+        
+        	 // 	  console.log(beach.name);
+
+        	 	// $('.addbeaches').on('click', function(){
+
+        	 	// 	('.beacheshere').append(beachdata);
+        	 	// });
+
+       			// };
+     
+              });
+
+          }]);
+  
+
+
+
    
 
-  }]);
+

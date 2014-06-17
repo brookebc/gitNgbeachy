@@ -1,4 +1,3 @@
-
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li><a ng-href="#">Home</a></li>
@@ -6,6 +5,7 @@
     <li><a ng-href="#">Contact</a></li>
     <li><a ng-href="#/map">Map</a></li>
     <li class="active"><a ng-href="#/geo">Find Ya</a></li>
+    <li><a ng-href="#/water">Water Now</a></li>
   </ul>
   <h3 class="text-muted">gitNgbeachy</h3>
 </div>
@@ -19,6 +19,10 @@
   <!-- <button ng-click="getLocation()">Find Me</button> -->
  
     <p>Your location is: {{center.lat}},{{center.lng}} </p>
+    <div class="beacheshere">
+      <button class="addbeaches">Add Beaches</button>
+      <p> beach names shall be listed here</p>
+    </div>
   
 </div>
 <div class="col-lg-6">
@@ -27,6 +31,11 @@
   <leaflet center="center" markers="markers"></leaflet>
     
 </div>
+<div class="row marketing">
+  <ul>
+    <li ng-repreat="marker in markers"></li>
+  </ul>
+  </div>
 
 
 <div class="footer">

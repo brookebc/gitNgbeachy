@@ -8,6 +8,7 @@ angular.module('gitNgbeachyApp', [
   'leaflet-directive',
   'geolocation'
 ])
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -21,6 +22,10 @@ angular.module('gitNgbeachyApp', [
       .when('/geo', {
         templateUrl: 'views/geolocate.html',
         controller: 'geoCtrl'
+      })
+      .when('/water', {
+        templateUrl: 'views/waterview.html',
+        controller: 'weatherCtrl'
       })
       .otherwise({
         redirectTo: '/'
