@@ -19,10 +19,6 @@ angular.module('gitNgbeachyApp', [
         templateUrl: 'views/geolocate.html',
         controller: 'geoCtrl'
       })
-      .when('/weather', {
-        templateUrl: 'views/weatherview.html',
-        controller: 'weatherCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
