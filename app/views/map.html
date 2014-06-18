@@ -16,7 +16,7 @@
  
     <p>Your location is: {{center.lat}},{{center.lng}} </p>
   
-    <div>
+  <!--   <div>
       <h4>Weather here</h4>
       <button ng-click="getWeather()">Get Weather</button>
       
@@ -30,13 +30,13 @@
         <li>Water temperature: {{today.waterTemp_F}}</li>
       </ul>
  
-    </div>
+    </div> -->
   
 </div>
 <div class="col-lg-6 marketing">
   <h4>This is where the map will go</h4>
 
-  <leaflet center="center" markers="markers" geojson="geojson" defaults="defaults"></leaflet>
+  <leaflet center="center" markers="markers" defaults="defaults"></leaflet>
     
 </div>
 <div class="row marketing">

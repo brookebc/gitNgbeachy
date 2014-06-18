@@ -19,6 +19,7 @@
     <div class="col-lg-4">
       <img ng-src="images/beach-holder.jpg"></img>
     </div>
+    
     <div class="col-lg-4">
       <ul>
         <li>Beach feature</li>
@@ -37,6 +38,23 @@
       </ul>
     </div>
   </div>
+
+  <div class="row marketing">
+   
+   <button ng-click="getWeather()">Get Weather</button>
+
+   <h2>Hardcoded charleston weather</h2>
+
+      <ul ng-repeat="today in todaysweather">
+        <li><h3>{{today.time|date:'shortTime'}}</h3></li>
+        <li>Hourly humidity: {{today.humidity}}</li>
+        <li>Air temperature: {{today.tempF}}</li>
+        <li>Expected wave height in meters: {{today.swellHeight_m}}
+        <li>Water temperature: {{today.waterTemp_F}}</li>
+      </ul>
+
+  </div>
+
   <div class="row">
      <p><a class="btn btn-lg btn-success pull-right" ng-click="#">Get Directions</a></p>
   </div>
