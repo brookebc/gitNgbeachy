@@ -1,7 +1,8 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
-    <li><a ng-href="#/">Home</a></li>
-    <li class="active"><a ng-href="#/geo">Find Ya</a></li>
+    <li><a ng-href="#">Home</a></li>
+    <li class="active"><a ng-href="#/map">Map</a></li>
+    <li><a ng-href="#/beach">Beach</a></li>
   </ul>
   <h3 class="text-muted">gitNgbeachy</h3>
 </div>
@@ -9,20 +10,12 @@
 <div class="row marketing col-lg-6">
  
   <h4>Beaching Time</h4>
-  <button ng-click="addMarkers()">Beach Me</button>
+  <button ng-click="addMarkers()">Show Me and Nearby Beaches</button>
 
   <!-- <button ng-click="getLocation()">Find Me</button> -->
  
     <p>Your location is: {{center.lat}},{{center.lng}} </p>
-    <div class="beacheshere">
-      <button ng-click="getbeachdata()">Add Beach Data</button>
-      <p> beach names shall be listed here</p>
-      <h3>Beach Data from my beaches file- unfiltered for location</h3>
-      <ul ng-repeat="beach in beachready">
-        <li>{{beach.properties.title}}</li>
-      </ul>
-
-    </div>
+  
     <div>
       <h4>Weather here</h4>
       <button ng-click="getWeather()">Get Weather</button>
@@ -43,7 +36,7 @@
 <div class="col-lg-6 marketing">
   <h4>This is where the map will go</h4>
 
-  <leaflet center="center" markers="markers" geojson="geojson"></leaflet>
+  <leaflet id="water" center="center" markers="markers" geojson="geojson" defaults="defaults"></leaflet>
     
 </div>
 <div class="row marketing">

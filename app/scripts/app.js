@@ -15,9 +15,13 @@ angular.module('gitNgbeachyApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/geo', {
-        templateUrl: 'views/geolocate.html',
-        controller: 'geoCtrl'
+      .when('/map', {
+        templateUrl: 'views/map.html',
+        controller: 'MapCtrl'
+      })
+      .when('/beach', {
+        templateUrl: 'views/detail.html',
+        controller: 'LocationCtrl'
       })
       .otherwise({
         redirectTo: '/'

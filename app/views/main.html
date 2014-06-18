@@ -1,30 +1,31 @@
 <div class="header">
   <ul class="nav nav-pills pull-right">
     <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#/geo">Find Ya</a></li>
+    <li><a ng-href="#/map">Map</a></li>
+    <li><a ng-href="#/beach">Beach</a></li>
   </ul>
   <h3 class="text-muted">gitNgbeachy</h3>
 </div>
 
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+  <h1>WELCOME BEACH LOVER!</h1>
+  <img src="images/beach-love.png"></img>
 </div>
 
 <div class="row marketing">
-  <div class="col-lg-6">
-  <h4>Welcome Beach Lover</h4>
-  
-</div>
-<div class="col-lg-6">
- 
- 
-</div>
 
+ <div class="beacheshere">
+      <button ng-click="getbeachdata()">Add Beach Data</button>
+      <p> beach names shall be listed here</p>
+      <h3>Beach Data from my beaches file- unfiltered for location</h3>
+      
+      <ul ng-repeat="beach in beachready">
+        <li>{{beach.properties.title}}</li>
+      </ul>
+
+</div>
+</div>
+ 
 <div class="footer">
   <p>♥ By Brooke Casey</p>
 </div>

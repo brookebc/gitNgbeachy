@@ -1,12 +1,45 @@
 'use strict';
 
-	angular.module('gitNgbeachyApp')	
-.factory('GeoJSON', function($resource) {
-	return $resource('scripts/beachdata.geo.json',{}, 
+angular.module('gitNgbeachyApp')	
+	.factory('GeoJSON', function($resource) {
+		return $resource('scripts/beachdata.geo.json',{}, 
+			{
+				get: { method: 'GET'}
+			})
+	})
+
+
+	// .factory('MarkerService', function($resource) {
+	// 	return $resource('scripts/markers.js',{}, 
+	// 		{
+	// 			get: { method: 'GET'}
+	// 		})
+	// })
+// .factory('L.tileLayer', function($resource) {
+// 	return $resource('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',{}, 
+// 		{
+// 			addToMap: { method: 'GET'}
+// 		})
+// })
+
+	// .factory('L.tileLayer', function($resource) {
+	// 	return $resource('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',{}, 
+	// 		{
+	// 			addToMap: { method: 'GET'}
+	// 		})
+	// })
+
+	.factory('LocationService', function($resource) {
+		return $resource('scripts/markers.js/:id', 
 		{
-			get: { method: 'GET'}
+			id: '@_id'
+		}, 
+		{
+			showMarkers: { method: 'GET'}
 		})
-});
+	});
+
+
  
  // .factory('weatherService', ['$resource', '$http', '$q', function($resource, $http, $q){
 	// return $resource('http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json',

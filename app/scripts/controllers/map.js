@@ -1,7 +1,7 @@
 'use strict';
  
 angular.module('gitNgbeachyApp')
-  .controller('geoCtrl', [ '$scope', 'geolocation', 'leafletEvents', '$http', 'GeoJSON', function ($scope, geolocation, leafletEvents, $http, GeoJSON) {
+  .controller('MapCtrl', [ '$scope', 'geolocation', 'leafletEvents', '$http', 'GeoJSON', 'leafletData', function ($scope, geolocation, leafletEvents, $http, GeoJSON, leafletData) {
     
     angular.extend($scope, {
    		center : {
@@ -12,46 +12,48 @@ angular.module('gitNgbeachyApp')
     	defaults: {
     		scrollWheelZoom: false
     	},
-    	markers: {}
+    	markers: {},
+    
     });
- 
-    var testData = GeoJSON.get();
+
+    // var layer = new L.StamenTileLayer("toner");
+    // var leaflet = new L.Map("element_id", {
+    // center: new L.LatLng(37.7, -122.4),
+    // zoom: 12
+    // });
+    //     leaflet.addLayer(layer);
  
     geolocation.getLocation().then(function(data){
  
     	$scope.center = {
     			lat: data.coords.latitude, 
     			lng: data.coords.longitude, 
-    			zoom: 13
+    			zoom: 14
     			}
-    		
-    		
+    				
     	console.log($scope.center);
  
-    		 });
-    		
-    	$scope.addMarkers = function() {
+    });
 
+	var testData = GeoJSON.get();
+    	
+    
+    	$scope.addMarkers = function() {
     		
     		 var icons = {
                 blue: {
                     type: 'div',
-                    iconSize: [20, 20],
+                    iconSize: [10, 10],
                     className: 'blue',
                     iconAnchor:  [5, 5]
                 },
                 red: {
                     type: 'div',
-                    iconSize: [10, 10],
+                    iconSize: [30, 30],
                     className: 'red',
                     iconAnchor:  [5, 5]
-                },
-                yellow: {
-                    type: 'div',
-                    iconSize: [10, 10],
-                    className: 'yellow',
-                    iconAnchor:  [5, 5]
                 }
+               
             }
 
             angular.extend($scope, {
@@ -59,13 +61,13 @@ angular.module('gitNgbeachyApp')
                 	charleston: {
                 		lat: 32.907,
                 		lng: -79.802,
-                		message: "Chucktown",
+                		message: "<button>Charleston</button>",
                 		icon: icons.blue
                 	},
                 	iopbeach: {
                     	lat: 32.79639,
                     	lng: -79.765,
-              			message: "Isle of Palms Beach",
+              			message: "<button>Isle of Palms Beach</button>",
               			icon: icons.blue
                 	},
                 	user: {
@@ -73,23 +75,25 @@ angular.module('gitNgbeachyApp')
                     	lng: $scope.center.lng,
               			message: "Here you are!",
               			icon: icons.red   
-                	}
-                },
-                geojson: {
-	                data: testData,
-	                style: {
-	                    weight: 2,
-	                    color: '#666',
-	                    fillColor: 'white'
-	                    // icon: icon.yellow
-                },
-                onEachFeature: function (feature, layer) {
-        			layer.bindPopup(feature.properties.description);
-    }
-            }
-            });
-        };
- 
+                		}
+                	},
+                	geojson: {
+	                	data: testData,
+			                style: {
+				                fillColor: "red",
+			                    weight: 2,
+			                    opacity: 1,
+			                    color: 'white',
+			                    dashArray: '3',
+			                    fillOpacity: 0.4,
+			                    icon: icons.blue
+		                	},
+           
+            			}
+               
+            	});
+        	};
+
  		$scope.events = {
                 markers: {
                     enable: leafletEvents.getAvailableMarkerEvents(),
@@ -111,23 +115,7 @@ angular.module('gitNgbeachyApp')
  
             <!-- end of markers and map data -->
  
-  //       $scope.getbeachdata = function(){
-  //       $http.get("scripts/beachdata.geojson").success(function(data) {
-  //       	$scope.beachdata = data;
-		// 	console.log($scope.beachdata);
- 
-		// 	console.log($scope.beachdata.features.length);
-		// 	console.log($scope.beachdata.features[0].properties.title);
- 
-		// 	$scope.beachready = $scope.beachdata.features;
- 
-		// 	console.log($scope.beachready);
- 
-		// 	return $scope.beachready;
- 
-		// 	});
-		// };
- 
+  
 		$scope.getWeather = function(){
  
 		$http({method: 'GET', url: 'http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json'}).
@@ -154,6 +142,8 @@ angular.module('gitNgbeachyApp')
 	};		
  
 }]);
+
+
 
 
           
