@@ -36,8 +36,8 @@ angular.module('gitNgbeachyApp')
 		}, 
 		{
 			showMarkers: { method: 'GET'}
-		})
 	});
+});
 
 
  

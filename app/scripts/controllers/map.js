@@ -4,11 +4,30 @@ angular.module('gitNgbeachyApp')
   .controller('MapCtrl', [ '$scope', 'geolocation', 'leafletEvents', '$http', 'GeoJSON', 'leafletData', function ($scope, geolocation, leafletEvents, $http, GeoJSON, leafletData) {
     
     angular.extend($scope, {
-   		center : {
+   		center: {
     		lat: 38.8833,
 	    	lng: -77.0167,
         	zoom: 4
-    	},
+    	   },
+        // layers: {
+        //     baselayers: {
+        //         osm: {
+        //             name: 'OpenStreetMap',
+        //             url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        //             type: 'xyz'
+        //         },
+        //         stamen: {
+        //             name:'Stamen',
+        //             url:'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg',
+        //             type:'xyz',
+        //             visitble: true,
+        //             layerOptions:{
+        //                 layers: [0],
+        //                 attribution:'OpenStreetMap & Stamen Designs'
+        //             }
+        //         }
+        //     }
+        // },
     	defaults: {
     		scrollWheelZoom: false
     	},
@@ -16,12 +35,14 @@ angular.module('gitNgbeachyApp')
     
     });
 
+    // leafletData.setLayers(leafletLayers, stamen);
+ 
     // var layer = new L.StamenTileLayer("toner");
     // var leaflet = new L.Map("element_id", {
     // center: new L.LatLng(37.7, -122.4),
     // zoom: 12
     // });
-    //     leaflet.addLayer(layer);
+        // leaflet.addLayer(stamen);
  
     geolocation.getLocation().then(function(data){
  
@@ -43,13 +64,13 @@ angular.module('gitNgbeachyApp')
     		 var icons = {
                 blue: {
                     type: 'div',
-                    iconSize: [10, 10],
+                    iconSize: [20, 20],
                     className: 'blue',
                     iconAnchor:  [5, 5]
                 },
                 red: {
                     type: 'div',
-                    iconSize: [30, 30],
+                    iconSize: [20, 20],
                     className: 'red',
                     iconAnchor:  [5, 5]
                 }
@@ -58,41 +79,101 @@ angular.module('gitNgbeachyApp')
 
             angular.extend($scope, {
             	markers: {
-                	charleston: {
-                		lat: 32.907,
-                		lng: -79.802,
-                		message: "<button>Charleston</button>",
-                		icon: icons.blue
-                	},
-                	iopbeach: {
-                    	lat: 32.79639,
-                    	lng: -79.765,
-              			message: "<button>Isle of Palms Beach</button>",
-              			icon: icons.blue
-                	},
-                	user: {
-                    	lat: $scope.center.lat,
-                    	lng: $scope.center.lng,
-              			message: "Here you are!",
-              			icon: icons.red   
-                		}
-                	},
-                	geojson: {
-	                	data: testData,
-			                style: {
-				                fillColor: "red",
-			                    weight: 2,
-			                    opacity: 1,
-			                    color: 'white',
-			                    dashArray: '3',
-			                    fillOpacity: 0.4,
-			                    icon: icons.blue
-		                	},
-           
-            			}
+                    "iopbeach": {
+                        "lat": 32.79639,
+                        "lng": -79.765,
+                        "message": "<button>Isle of Palms Beach</button>",
+                        "id":1
+                    },
+                    "sullivansisland": {
+                        "lat": 32.76333,
+                        "lng": -79.83778,
+                        "message": "<button>Sullivans Island Beach</button>",
+                        "id":2
+                    },
+                    "FollyBeach": {
+                        "lat": 32.666152,
+                        "lng": -79.939213,
+                        "message": "<button>Folly Beach</button>",
+                     
+                         "id":3
+                    },
+                    "NorthMyrtleBeach": {
+                        "lat": 33.822216,
+                        "lng": -78.680974,
+                        "message": "<button>North Myrtle Beach</button>",
+                         "id":4
+                    },
+                    "EdistoBeach": {
+                        "lat": 32.487613,
+                        "lng": -80.324402,
+                        "message": "<button>Edisto Beach</button>",
+                        "id":5
+                    },
+                    "SurfsideBeach": {
+                        "lat": 33.606111,
+                        "lng": -78.973056,
+                        "message": "<button>Surfside Beach</button>",
+                        "id":7
+                    },
+                    "LitchfieldBeach": {
+                        "lat": 33.4669,
+                        "lng": -79.0997,
+                        "message": "<button>Litchfield Beach</button>",
+                        "id":8
+                    },
+                    "PawleysIslandBeach": {
+                        "lat": 33.425833,
+                        "lng": -79.125,
+                        "message": "<button>Pawley's Island Beach</button>",
+                        "id":9
+                    },
+                    "HuntingtonBeachStatePark": {
+                        "lat": 33.5139,
+                        "lng": -79.0611,
+                        "message": "<button>Huntington Beach State Park</button>",
+                        "id":10
+                    },
+                    "user": {
+                        "lat": $scope.center.lat,
+                        "lng": $scope.center.lng,
+                        "message": "Here you are!",
+                        "icon": icons.red,
+                        "id":11
+                    }
+                }
+            });
+        };
                
-            	});
-        	};
+                	// iopbeach: {
+                 //    	lat: 32.79639,
+                 //    	lng: -79.765,
+              			// message: "<button>Isle of Palms Beach</button>",
+              			// icon: icons.blue
+                	// },
+                	// user: {
+                 //    	lat: $scope.center.lat,
+                 //    	lng: $scope.center.lng,
+              			// message: "Here you are!",
+              			// icon: icons.red   
+                	// 	}
+                	// }
+
+               //  	geojson: {
+	              //   	data: testData,
+			            //     style: {
+				           //      fillColor: "red",
+			            //         weight: 2,
+			            //         opacity: 1,
+			            //         color: 'white',
+			            //         dashArray: '3',
+			            //         fillOpacity: 0.4,
+			            //         icon: icons.blue
+		             //    	},
+           
+            			// }
+               
+        
 
  		$scope.events = {
                 markers: {

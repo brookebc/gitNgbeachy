@@ -58,7 +58,7 @@
 		"amenity": "free-parking",
 		"marker-color": "#1087bf",
 		"marker-size": "medium",
-		"marker-symbol": "fast-food"
+		"marker-symbol": "swimming"
 		},
     	"geometry": {
       		"type": "Point",
@@ -90,7 +90,7 @@
 		"amenity": "free-parking",
 		"marker-color": "#1087bf",
 		"marker-size": "medium",
-		"marker-symbol": "fast-food"
+		"marker-symbol": "swimming"
 		},
     	"geometry": {
       		"type": "Point",
