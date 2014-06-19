@@ -81,8 +81,6 @@ angular.module('gitNgbeachyApp')
                     ]
                 };
          
-            
-
             var findOne = function(id) {
                 var selected;
                 var markers = getAll();
