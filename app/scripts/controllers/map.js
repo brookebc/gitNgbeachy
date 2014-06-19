@@ -82,19 +82,19 @@ angular.module('gitNgbeachyApp')
                     "iopbeach": {
                         "lat": 32.79639,
                         "lng": -79.765,
-                        "message": "<button>Isle of Palms Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/1'>Isle of Palms Beach</a>",
                         "id":1
                     },
                     "sullivansisland": {
                         "lat": 32.76333,
                         "lng": -79.83778,
-                        "message": "<button>Sullivans Island Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/2'>Sullivans Island Beach</a>",
                         "id":2
                     },
                     "FollyBeach": {
                         "lat": 32.666152,
                         "lng": -79.939213,
-                        "message": "<button>Folly Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/3'>Folly Beach</a>",
                      
                          "id":3
                     },
@@ -114,32 +114,32 @@ angular.module('gitNgbeachyApp')
                         "lat": 33.606111,
                         "lng": -78.973056,
                         "message": "<button>Surfside Beach</button>",
-                        "id":7
+                        "id":6
                     },
                     "LitchfieldBeach": {
                         "lat": 33.4669,
                         "lng": -79.0997,
                         "message": "<button>Litchfield Beach</button>",
-                        "id":8
+                        "id":7
                     },
                     "PawleysIslandBeach": {
                         "lat": 33.425833,
                         "lng": -79.125,
                         "message": "<button>Pawley's Island Beach</button>",
-                        "id":9
+                        "id":8
                     },
                     "HuntingtonBeachStatePark": {
                         "lat": 33.5139,
                         "lng": -79.0611,
-                        "message": "<button>Huntington Beach State Park</button>",
-                        "id":10
+                        "message": "<a class='btn btn-success' href='#/beaches/huntington'>Huntington Beach State Park</button>",
+                        "id":9
                     },
                     "user": {
                         "lat": $scope.center.lat,
                         "lng": $scope.center.lng,
                         "message": "Here you are!",
                         "icon": icons.red,
-                        "id":11
+                        "id":10
                     }
                 }
             });

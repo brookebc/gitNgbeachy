@@ -12,7 +12,6 @@
     "angular-sanitize": "1.2.6",
     "angular-route": "1.2.6",
     "leaflet": "0.7.3",
-    "leaflet.markercluster": "~0.4.0",
     "angularjs-geolocation": "~0.1.1"
   },
   "devDependencies": {

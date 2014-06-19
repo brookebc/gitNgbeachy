@@ -7,6 +7,8 @@ angular.module('gitNgbeachyApp', [
   'ngRoute',
   'leaflet-directive',
   'geolocation'
+  // 'directives',
+  // 'layer-directives'
 ])
 
   .config(function ($routeProvider) {
@@ -19,7 +21,7 @@ angular.module('gitNgbeachyApp', [
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
       })
-      .when('/beach', {
+      .when('/beach/:id', {
         templateUrl: 'views/detail.html',
         controller: 'LocationCtrl'
       })
@@ -27,3 +29,6 @@ angular.module('gitNgbeachyApp', [
         redirectTo: '/'
       });
 });
+
+// angular.module('gitNgbeachyApp.directives', []);
+// angular.module('gitNgbeachyApp.layer-directives', []);

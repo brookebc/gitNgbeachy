@@ -3,6 +3,7 @@
     <li class="active"><a ng-href="#">Home</a></li>
     <li><a ng-href="#/map">Map</a></li>
     <li><a ng-href="#/beach">Beach</a></li>
+    <li><a ng-href="#/beaches">Beaches</a></li>
   </ul>
   <h3 class="text-muted">gitNgbeachy</h3>
 </div>
@@ -13,6 +14,11 @@
 </div>
 
 <div class="row marketing">
+  <div leaflet-map controls="layers">
+    <leaflet-layer name="Street" lyr-type="tiles" lyr-options="{isBaseLayer:true}"></leaflet-layer>
+    <az-layer name="Aerial" lyr-type="tiles" lyr-url="http://otile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+    is-base-layer="true"></az-layer>
+  </div>
 
  <div class="beacheshere">
       <button ng-click="getbeachdata()">Add Beach Data</button>
