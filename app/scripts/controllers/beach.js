@@ -4,13 +4,9 @@ angular.module('gitNgbeachyApp')
   .controller('LocationCtrl', [ '$scope', '$location', '$http', '$routeParams', 'MarkersSvc', function ($scope, $location, $http, $routeParams, MarkersSvc) {
      
     $scope.markersTest = MarkersSvc.getAll();
-    // $scope.marker = MarkersSvc.findOne(Number($routeParams.id));
+    $scope.marker = MarkersSvc.findOne(Number($routeParams.id));
     console.log($scope.markersTest);
 
-
-
-
- 
     $scope.getWeather = function(){
  
         $http({method: 'GET', url: 'http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json'}).

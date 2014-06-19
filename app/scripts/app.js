@@ -21,7 +21,7 @@ angular.module('gitNgbeachyApp', [
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
       })
-      .when('/beach', {
+      .when('/beach/:id', {
         templateUrl: 'views/detail.html',
         controller: 'LocationCtrl'
       })
