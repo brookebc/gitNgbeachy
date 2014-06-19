@@ -6,63 +6,30 @@
   <h3 class="text-muted">Beach Lover</h3>
 </div>
 
- <div>
- <!-- {{markersTest}} -->
-
-
-
+ <div class="row marketing">
   <h1>Nice choice! {{marker.name}}</h1>
-  <p>{{marker.lat}}</p>
-  <p>{{marker.lng}}</p>
-  <p>{{marker.parking}}</p>
-  <img ng-src="{{marker.image}}"></img>
-
-</ul>
-
-
 </div>
-     <div class="col-lg-4 row marketing">
-      <img ng-src="images/beach-holder.jpg" width="100px"></img>
-    </div>
 
-
-
-    <div class="col-lg-4">
-    <h3>Beach Features</h3>
-      <ul>
-        <li>Beach feature</li>
-        <li>Beach feature</li>
-        <li>Beach feature</li>
-        <li>Beach feature</li>
-        <li>Beach feature</li>
-      </ul>
-    </div>
-
-    <div class="col-lg-4">
-    <h3>Weather Details</h3>
-      <ul>
-        <li>Weather data</li>
-        <li>Weather data</li>
-        <li>Weather data</li>
-        <li>Weather data</li>
-      </ul>
-    </div>
-
-  <div class="row marketing">
-    <h2>Hardcoded charleston weather</h2>
-
-    
-      <ul ng-repeat="today in todaysweather">
-        <li><h3>Time: {{today.time}} (24/hr)</h3></li>
-        <li>Hourly humidity: {{today.humidity}}</li>
-        <li>Air temperature: {{today.tempF}}</li>
-        <li>Expected wave height in meters: {{today.swellHeight_m}}
-        <li>Water temperature: {{today.waterTemp_F}}</li>
-      </ul>
-
+<div class="row marketing">
+  <div class="col-lg-6">
+      <h4>Beach Features</h4>
+      <p>{{marker.lat}}</p>
+      <p>{{marker.lng}}</p>
+      <p>{{marker.parking}}</p>
+      <img class="beachpic" ng-src="{{marker.image}}"></img>  
   </div>
 
- <hr>
+  <div class="col-lg-6"> 
+     <h3>Today's Weather Forecast for: {{marker.name}}</h3>
+        <ul class="weather-detail" ng-repeat="today in todaysweather">
+          <li><h4>Time: {{today.time}} (24/hr)</h4></li>
+          <li>Hourly humidity: {{today.humidity}}</li>
+          <li>Air temperature: {{today.tempF}}</li>
+          <li>Expected wave height in meters: {{today.swellHeight_m}}
+          <li>Water temperature: {{today.waterTemp_F}}</li>
+        </ul>
+  </div>
+
 
 </div>
 

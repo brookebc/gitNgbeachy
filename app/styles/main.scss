@@ -2,10 +2,20 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
+.weather-detail ul > li {
+    list-style-type: none;
+}
+
+.beachpic{
+    width:70%;
+    margin: 0px, auto;
+}
+
  .red {
     border-radius: 120px;
     opacity: .75;
     background-color: #FF0000;
+
 }
 
 .blue {
@@ -25,11 +35,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     background-color: #FF0000;
 }
 
-.blue {
-    border-radius: 120px;
-    opacity: .75;
-    background-color: #0000FF;
-}
 
 .beach-preview ul > li {
     display: inline-block;
@@ -48,6 +53,16 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.landing {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width:100%;
+    margin:0px 0px;
+    padding:0px 0px;
+    background: url(../images/chs-beachy.png);
+    background-repeat: none;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -86,6 +101,7 @@ body {
 .jumbotron {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
+    
 }
 
 .jumbotron .btn {

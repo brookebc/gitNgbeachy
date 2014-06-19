@@ -13,10 +13,10 @@ angular.module('gitNgbeachyApp')
                         "image":"images/beach-44.jpg"
                         },
                         {
-                        "name": "Sullivans Island",
+                        "name": "Sullivan's Island",
                         "lat": 32.76333,
                         "lng": -79.83778,
-                        "message": "<a class='btn btn-success' href='#/beach/2'>Sullivans Island Beach</a>",
+                        "message": "<a class='btn btn-success' href='#/beach/2'>Sullivan's Island Beach</a><br>",
                         "id":2,
                         "image":"images/beach-44.jpg"
                         },

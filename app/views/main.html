@@ -6,29 +6,21 @@
 
   <h3 class="text-muted">Beach Lover</h3>
 </div>
+<div class="landing">
 
-<div class="jumbotron">
-  <h1>WELCOME BEACH LOVER!</h1>
-  <img src="images/beach-love.png"></img>
-</div>
-
-<div class="row marketing">
-  <div leaflet-map controls="layers">
-    <leaflet-layer name="Street" lyr-type="tiles" lyr-options="{isBaseLayer:true}"></leaflet-layer>
-    <az-layer name="Aerial" lyr-type="tiles" lyr-url="http://otile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
-    is-base-layer="true"></az-layer>
+  <div class="jumbotron">
+    <h1>WELCOME BEACH LOVER!</h1>
+    <img src="images/beach-love.png"></img>
   </div>
 
- <div class="beacheshere">
-      <button ng-click="getbeachdata()">Add Beach Data</button>
-      <p> beach names shall be listed here</p>
-      <h3>Beach Data from my beaches file- unfiltered for location</h3>
-      
-      <ul ng-repeat="beach in beachready">
-        <li>{{beach.properties.title}}</li>
-      </ul>
-
-</div>
+  <div class="row marketing">
+    <div leaflet-map controls="layers">
+      <leaflet-layer name="Street" lyr-type="tiles" lyr-options="{isBaseLayer:true}"></leaflet-layer>
+      <az-layer name="Aerial" lyr-type="tiles" lyr-url="http://otile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png"
+      is-base-layer="true"></az-layer>
+    </div>   
+  </div>
+  
 </div>
  
 <div class="footer">
