@@ -13,12 +13,12 @@ angular.module('gitNgbeachyApp')
             success(function(data, status) {
             // console.log('success!');
             // console.log(data);
-            $scope.forecastdata = data;
+             var forecastdata = data;
             // console.log($scope.forecastdata);
  
             // console.log($scope.forecastdata.data.weather[0].hourly);
  
-            $scope.todaysweather = $scope.forecastdata.data.weather[0].hourly
+            $scope.todaysweather = forecastdata.data.weather[0].hourly
             
             console.log($scope.todaysweather);
  
