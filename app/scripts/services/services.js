@@ -9,21 +9,24 @@ angular.module('gitNgbeachyApp')
                         "lat": 32.79639,
                         "lng": -79.765,
                         "message": "<a class='btn btn-success' href='#/beach/1'>Isle of Palms Beach</a>",
-                        "id":1
+                        "id":1,
+                        "parking": "Residential parking"
                         },
                         {
                         "name": "Sullivans Island",
                         "lat": 32.76333,
                         "lng": -79.83778,
                         "message": "<a class='btn btn-success' href='#/beach/2'>Sullivans Island Beach</a>",
-                        "id":2
+                        "id":2,
+                        "parking": "Residential parking"
                         },
                         {
                         "name": "Folly Beach",
                         "lat": 32.666152,
                         "lng": -79.939213,
                         "message": "<a class='btn btn-success' href='#/beach/3'>Folly Beach</a>",
-                         "id":3
+                        "id":3,
+                        "parking": "Residential parking"
                         },
                         {
                         "name": "North Myrtle Beach",

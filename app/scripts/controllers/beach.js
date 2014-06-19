@@ -36,6 +36,16 @@ $scope.getWeather = function(weatherurl){
             // console.log($scope.forecastdata.data.weather[0].hourly);
  
             $scope.todaysweather = $scope.forecastdata.data.weather[0].hourly;
+
+            var fixtime = $scope.forecastdata.data.weather[0].hourly.time;
+
+            console.log(fixtime);
+
+            // $scope readytime = function (){
+
+
+            // };
+
             
             console.log($scope.todaysweather);
  
