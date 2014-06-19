@@ -54,8 +54,7 @@
 
   <div class="row marketing">
     <h2>Hardcoded charleston weather</h2>
-      <p><a class="btn btn-lg btn-success pull-left" ng-click="getWeather()">Get Beach Weather</a></p>
-
+    
       <ul ng-repeat="today in todaysweather">
         <li><h3>{{today.time|date:'shortTime'}}</h3></li>
         <li>Hourly humidity: {{today.humidity}}</li>

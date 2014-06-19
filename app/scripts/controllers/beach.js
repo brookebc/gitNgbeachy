@@ -22,32 +22,29 @@ angular.module('gitNgbeachyApp')
 
     console.log(marklng);
 
-    console.log(weatherurl);
+    // console.log(weatherurl);
 
    var weatherurl = "http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=" + marklat + ","+ marklng + "&format=json";
 
     console.log(weatherurl);
 
-    var beachweather = function (weatherurl){
+$scope.getWeather = function(weatherurl){
 
-        $scope.getweather = function(){
-            
-        };
-  
-        $http({method: 'GET', url:'weatherurl'}).
+        $http({method: 'GET', url: weatherurl }).
             success(function(data, status) {
             console.log('success!');
             console.log(data);
-             // var forecastdata = data;
+
+            $scope.forecastdata = data;
             // console.log($scope.forecastdata);
  
             // console.log($scope.forecastdata.data.weather[0].hourly);
  
-            // $scope.todaysweather = forecastdata.data.weather[0].hourly
+            $scope.todaysweather = $scope.forecastdata.data.weather[0].hourly;
             
-            // console.log($scope.todaysweather);
+            console.log($scope.todaysweather);
  
-            return $scope.yourbeachweather;
+            return $scope.todaysweather;
  
         }).
         error(function(data, status) {
@@ -57,7 +54,12 @@ angular.module('gitNgbeachyApp')
  
     };  
 
-    console.log($scope.yourbeachweather);
+$scope.getWeather(weatherurl); 
+
+    // $scope.perfectweather = $scope.getWeather();
+
+// $scope.beachyweather = $scope.yourbeachweather;
+    // console.log($scope.yourbeachweather);
   
 //   }]);
   
