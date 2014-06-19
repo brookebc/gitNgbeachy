@@ -21,7 +21,7 @@ angular.module('gitNgbeachyApp', [
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
       })
-      .when('/beach/:id', {
+      .when('/beach', {
         templateUrl: 'views/detail.html',
         controller: 'LocationCtrl'
       })
@@ -29,6 +29,3 @@ angular.module('gitNgbeachyApp', [
         redirectTo: '/'
       });
 });
-
-// angular.module('gitNgbeachyApp.directives', []);
-// angular.module('gitNgbeachyApp.layer-directives', []);

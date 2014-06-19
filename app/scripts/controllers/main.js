@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gitNgbeachyApp')
-  .controller('MainCtrl', [ '$scope', '$http', function ($scope, $http) {
+  .controller('MainCtrl', [ '$scope', function ($scope) {
 
  //  	$scope.getbeachdata = function(){
   		 

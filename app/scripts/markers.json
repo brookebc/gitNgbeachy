@@ -1,22 +1,23 @@
-{
-              markers: {
-                    "iopbeach": {
+[
+              {
+                        "name":"iopbeach"
                         "lat": 32.79639,
                         "lng": -79.765,
                         "message": "<button>Isle of Palms Beach</button>",
                         "id":1
                     },
-                    "sullivansisland": {
+                    {
+                        "name":sullivansisland",
                         "lat": 32.76333,
                         "lng": -79.83778,
                         "message": "<button>Sullivans Island Beach</button>",
                         "id":2
                     },
-                    "FollyBeach": {
+                    {
+                    "name: FollyBeach"
                         "lat": 32.666152,
                         "lng": -79.939213,
                         "message": "<button>Folly Beach</button>",
-                     
                          "id":3
                     },
                     "NorthMyrtleBeach": {
@@ -59,7 +60,6 @@
                         "lat": $scope.center.lat,
                         "lng": $scope.center.lng,
                         "message": "Here you are!",
-                        "icon": icons.red,
                         "id":11
                     }
                 }

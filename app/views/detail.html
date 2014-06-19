@@ -3,22 +3,31 @@
     <li><a ng-href="#">Home</a></li>
     <li><a ng-href="#/map">Map</a></li>
     <li class="active"><a ng-href="#/beach">Beach</a></li>
-    <li><a ng-href="#/beaches">Beaches</a></li>
+
   </ul>
   <h3 class="text-muted">gitNgbeachy</h3>
 </div>
 
  <div>
-  
-  <div class="alert alert-success"><h1>Beach Name</h1></div>
-  <p>Details here</p>
+ <!-- {{markersTest}} -->
+
+
+<ul ng-repeat="mark in markersTest">
+  <li>{{mark.name}}</li>
+  <li>{{markersTest.id}}</li>
+</ul>
+
+
 </div>
-  <!-- <div>
-    <button ng-click="allBeaches()">Show Beaches</button>
-    <ul ng-repeat="beach in markers"></ul>
-    <li>{{beach.id}}</li>
+  
+<!--   <div class="alert alert-success"><h1>{{beach.id}}</h1></div>
+  <p>Details here</p>
+</div> -->
+  <div>
+    <a class='btn btn-sucess'>Show Beaches</a>
+   
   </div>
- -->
+
     <div class="col-lg-4 row marketing">
       <img ng-src="images/beach-holder.jpg" width="100px"></img>
     </div>
@@ -48,16 +57,16 @@
 
   <div class="row marketing">
     <h2>Hardcoded charleston weather</h2>
-      <p><a class="btn btn-lg btn-success pull-left" ng-click="getWeather()">Get Beach Weather</a></p>
+    <!--   <p><a class="btn btn-lg btn-success pull-left" ng-click="getWeather()">Get Beach Weather</a></p> -->
 
-      <ul ng-repeat="today in todaysweather">
+      <!-- <ul ng-repeat="today in todaysweather">
         <li><h3>{{today.time|date:'shortTime'}}</h3></li>
         <li>Hourly humidity: {{today.humidity}}</li>
         <li>Air temperature: {{today.tempF}}</li>
         <li>Expected wave height in meters: {{today.swellHeight_m}}
         <li>Water temperature: {{today.waterTemp_F}}</li>
       </ul>
-
+ -->
   </div>
 
  <!--  <div class="row">
@@ -65,17 +74,17 @@
   </div>
    --> 
  <hr>
-<div class="beach-preview row">
+<!-- <div class="beach-preview row">
 
   <h2>Your nearby alternatives</h2>
    <h4>This is just a model of the information for planning</h4>
     <div class="alert alert-success">This is awesome</div>
   <ul>
-    <li class="beach-snap"><img ng-src="images/beach-holder.jpg"></img><br><p><a class="btn btn-md btn-success" ng-click="#">See More</a></p></li>
-    <li class="beach-snap"><img ng-src="images/beach-holder.jpg"></img><br><p><a class="btn btn-md btn-success" ng-click="#">See More</a></p></li>
-    <li class="beach-snap"><img ng-src="images/beach-holder.jpg"></img><br><p><a class="btn btn-md btn-success" ng-click="#">See More</a></p></li>
+    <li class="beach-snap"><img ng-src="images/beach-holder.jpg"></img><br><p><a class="btn btn-md btn-success" >See More</a></p></li>
+    <li class="beach-snap"><img ng-src="images/beach-holder.jpg"></img><br><p><a class="btn btn-md btn-success" >See More</a></p></li>
+    <li class="beach-snap"><img ng-src="images/beach-holder.jpg"></img><br><p><a class="btn btn-md btn-success" >See More</a></p></li>
   </ul>
-</div>
+</div> -->
 </div>
 
 <div class="footer">

@@ -1,109 +1,131 @@
 'use strict';
 
 angular.module('gitNgbeachyApp')	
-    .factory('GeoJSON', function($resource) {
-        return $resource('scripts/beachdata.geo.json',{}, 
-            {
-                get: { method: 'GET'}
-            })
-    })
-
-    // .factory('LocatonService', function($resource) {
-    //     return $resource('scripts/beachdata.geo.json/:id',
-    //         {
-    //             id: '@_id'
-    //         }, 
-    //         {
-    //             showBeach: { method: 'GET'}
-    //         })
-    // });
-
-	.factory('LocationService', function() {
-		
-           var markers = [
-                   { 
-                   	"IOP Beach": {
+	.factory('MarkersSvc', function($http) {
+         var getAll = function(){
+            return [
+                        { 
+                        "name": "IOP Beach",
                         "lat": 32.79639,
                         "lng": -79.765,
-                        "message": "<button>Isle of Palms Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/1'>Isle of Palms Beach</a>",
                         "id":1
-                    	},
-                    "Sullivans Island": {
+                        },
+                        {
+                        "name": "Sullivans Island",
                         "lat": 32.76333,
                         "lng": -79.83778,
-                        "message": "<button>Sullivans Island Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/2'>Sullivans Island Beach</a>",
                         "id":2
                         },
-                    "Folly Beach": {
+                        {
+                        "name": "Folly Beach",
                         "lat": 32.666152,
                         "lng": -79.939213,
-                        "message": "<button>Folly Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/3'>Folly Beach</a>",
                          "id":3
                         },
-                    "North Myrtle Beach": {
+                        {
+                        "name": "North Myrtle Beach",
                         "lat": 33.822216,
                         "lng": -78.680974,
-                        "message": "<button>North Myrtle Beach</button>",
-                         "id":4
+                        "message": "<a class='btn btn-success' href='#/beach/4'>North Myrtle Beach</a>",
+                        "id":4
                         },
-                    "Edisto Beach": {
+                        {
+                        "name": "Edisto Beach",
                         "lat": 32.487613,
                         "lng": -80.324402,
-                        "message": "<button>Edisto Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/5'>Edisto Beach</a>",
                         "id":5
                         },
-                    "Surfside Beach": {
+                        {
+                        "name": "Surfside Beach",
                         "lat": 33.606111,
                         "lng": -78.973056,
-                        "message": "<button>Surfside Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/6'>Surfside Beach</a>",
                         "id":6
                         },
-                    "Litchfield Beach": {
+                        {
+                        "name": "Litchfield Beach",
                         "lat": 33.4669,
                         "lng": -79.0997,
-                        "message": "<button>Litchfield Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/7'>Litchfield Beach</a>",
                         "id":7
                         },
-                    "Pawley's Island Beach": {
+                        {
+                        "name": "Pawley's Island Beach",
                         "lat": 33.425833,
                         "lng": -79.125,
-                        "message": "<button>Pawley's Island Beach</button>",
+                        "message": "<a class='btn btn success' href='#/beach/8'>Pawley's Island Beach</a>",
                         "id":8
                         },
-                    "Huntington Beach State Park": {
+                        {
+                        "name": "Huntington Beach State Park",
                         "lat": 33.5139,
                         "lng": -79.0611,
-                        "message": "<button>Huntington Beach State Park</button>",
+                        "message": "<a class='btn btn success' href='#/beach/9'>Huntington Beach State Park</a>",
                         "id":9
                         }
-                    }
-                      
-                ];
-
-	return	{
-			     showBeaches: markers
-                }
-
-  
- //        var findOne = function ($routeParams, $scope){
-
- //            var i;
- //            var selected;
+                    
+                         
+                    ]
+                };
+         
             
- //            for (i=0; i<arr.length; i++){
 
- //                 if (selected.id===$routeParams.id){
+            var findOne = function(id) {
+                var selected;
+                var markers = getAll();
+                var len = getAll().length
+                for(var i = 0; i< len; i++) {
+                        if(markers[i].id === id) {
+                            selected = markers[i];
+                        }
+                }
+                return selected;
+            };
+ 
+        return {
+            getAll: getAll,
+            findOne: findOne
+            }
 
- //                    return $location.path("beach/:id");          
+          
+        });
 
+
+            // var findOne = function(id) {
+            //     var selected;
+            //     var markers = getAll();
+            //     var len = getAll().length
+            //     for(var i = 0; i< len; i++) {
+            //             if(markers[i].id === id) {
+            //                 selected = markers[i];
+            //             }
+            //     }
+            //     return selected;
+            // }
+ 
+        // return {
+        //     get: getAll
+        //     findOne: findOne
+        //     }
+      
+		
+ //           var showBeaches = function() {
+
+ //                return myData;
+           
  //            };
 
- //        };
+	// return	{
+	// 		     showBeaches: showBeaches
+ //            }
 
- //    }
-
+  
             
-	});
+	// });
 
 
  
@@ -124,16 +146,6 @@ angular.module('gitNgbeachyApp')
 // 			}
 
 // }]);
-
-  // $http({method: 'GET', url: '/someUrl'}).
-    // success(function(data, status, headers, config) {
-      // this callback will be called asynchronously
-      // when the response is available
-    // }).
-    // error(function(data, status, headers, config) {
-      // called asynchronously if an error occurs
-      // or server returns response with an error status.
-    // });
 
     // .factory('BeachService', function($resource){
  //        return $resource('scripts/markers.json',{},

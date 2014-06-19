@@ -101,37 +101,37 @@ angular.module('gitNgbeachyApp')
                     "NorthMyrtleBeach": {
                         "lat": 33.822216,
                         "lng": -78.680974,
-                        "message": "<button>North Myrtle Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/4'>North Myrtle Beach</a>",
                          "id":4
                     },
                     "EdistoBeach": {
                         "lat": 32.487613,
                         "lng": -80.324402,
-                        "message": "<button>Edisto Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/5'>Edisto Beach</a>",
                         "id":5
                     },
                     "SurfsideBeach": {
                         "lat": 33.606111,
                         "lng": -78.973056,
-                        "message": "<button>Surfside Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/6'>Surfside Beach</a>",
                         "id":6
                     },
                     "LitchfieldBeach": {
                         "lat": 33.4669,
                         "lng": -79.0997,
-                        "message": "<button>Litchfield Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/7'>Litchfield Beach</a>",
                         "id":7
                     },
                     "PawleysIslandBeach": {
                         "lat": 33.425833,
                         "lng": -79.125,
-                        "message": "<button>Pawley's Island Beach</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/8'>Pawley's Island Beach</a>",
                         "id":8
                     },
                     "HuntingtonBeachStatePark": {
                         "lat": 33.5139,
                         "lng": -79.0611,
-                        "message": "<a class='btn btn-success' href='#/beaches/huntington'>Huntington Beach State Park</button>",
+                        "message": "<a class='btn btn-success' href='#/beach/9'>Huntington Beach State Park</a>",
                         "id":9
                     },
                     "user": {
