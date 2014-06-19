@@ -94,40 +94,6 @@ angular.module('gitNgbeachyApp')
           
         });
 
-
-            // var findOne = function(id) {
-            //     var selected;
-            //     var markers = getAll();
-            //     var len = getAll().length
-            //     for(var i = 0; i< len; i++) {
-            //             if(markers[i].id === id) {
-            //                 selected = markers[i];
-            //             }
-            //     }
-            //     return selected;
-            // }
- 
-        // return {
-        //     get: getAll
-        //     findOne: findOne
-        //     }
-      
-		
- //           var showBeaches = function() {
-
- //                return myData;
-           
- //            };
-
-	// return	{
-	// 		     showBeaches: showBeaches
- //            }
-
-  
-            
-	// });
-
-
  
  // .factory('weatherService', ['$resource', '$http', '$q', function($resource, $http, $q){
 	// return $resource('http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=32.79639,-79.765&format=json',
