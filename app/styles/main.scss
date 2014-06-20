@@ -2,6 +2,13 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
+
+.tech li {
+    display: inline-block;
+    list-style: none;
+    text-align: middle;
+
+}
 .jumbo {
     color: #c1e79a;
 }

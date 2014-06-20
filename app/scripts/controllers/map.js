@@ -49,7 +49,7 @@ angular.module('gitNgbeachyApp')
     	$scope.center = {
     			lat: data.coords.latitude, 
     			lng: data.coords.longitude, 
-    			zoom: 11
+    			zoom: 9
     			}
     				
     	console.log($scope.center);
