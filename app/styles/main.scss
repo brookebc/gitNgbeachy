@@ -2,6 +2,13 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
+.header-interior {
+    margin-top: 0px, auto;
+    padding: 0px;
+    min-height: 200px;
+    width:100%;
+}
+
 .container-wide{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -10,8 +17,14 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding:0px 0px;
     background: url(../images/chs-beachy.png);
     background-repeat: none;
+    min-height:100px;
 }
 
+.gulls {
+    background: url(../images/gulls-header.jpg);
+    // background-position: 50px 100px;
+    // background-repeat: none;
+}
 .white {
    background-color: #fff6ea;
 }
@@ -35,6 +48,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     border-radius: 120px;
     opacity: .75;
     background-color: #0000FF;
+    // background: url(../images/brookeStar.png);
 }
 
 .angular-leaflet-map { 
@@ -47,7 +61,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     opacity: .75;
     background-color: #FF0000;
 }
-
 
 .beach-preview ul > li {
     display: inline-block;
@@ -67,8 +80,6 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
-
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -109,8 +120,6 @@ body {
     background: url(../images/beach-way.jpg);
     background-position: 50px 500px;
     background-repeat: none;
-    font-size: 60px;
-    // height: 400px:
 }
 
 .jumbotron .btn {

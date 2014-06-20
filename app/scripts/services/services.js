@@ -5,10 +5,10 @@ angular.module('gitNgbeachyApp')
          var getAll = function(){
             return [
                         { 
-                        "name": "IOP Beach",
+                        "name": "Isle of Palm's Beach",
                         "lat": 32.79639,
                         "lng": -79.765,
-                        "message": "<a class='btn btn-success' href='#/beach/1'>Isle of Palms Beach</a>",
+                        "message": "<a class='btn btn-default' href='#/beach/1'>IOP Beach</a>",
                         "id":1,
                         "image":"images/beach-44.jpg"
                         },
@@ -16,7 +16,7 @@ angular.module('gitNgbeachyApp')
                         "name": "Sullivan's Island",
                         "lat": 32.76333,
                         "lng": -79.83778,
-                        "message": "<a class='btn btn-success' href='#/beach/2'>Sullivan's Island Beach</a><br>",
+                        "message": "<a class='btn btn-default' href='#/beach/2'>Sullivan's Island Beach</a><br>",
                         "id":2,
                         "image":"images/beach-44.jpg"
                         },
@@ -24,7 +24,7 @@ angular.module('gitNgbeachyApp')
                         "name": "Folly Beach",
                         "lat": 32.666152,
                         "lng": -79.939213,
-                        "message": "<a class='btn btn-success' href='#/beach/3'>Folly Beach</a>",
+                        "message": "<a class='btn btn-default' href='#/beach/3'>Folly Beach</a>",
                         "id":3,
                         "image":"images/beach-44.jpg"
                         },
