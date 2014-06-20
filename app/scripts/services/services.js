@@ -11,7 +11,11 @@ angular.module('gitNgbeachyApp')
                         "message": "<a class='btn btn' href='#/beach/1'>IOP Beach</a>",
                         "id":1,
                         "image1":"images/beach-44.jpg",
-                        "image2":"images/beach-44.jpg"
+                        "image2":"images/iop-turtle.jpeg",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         },
                         {
                         "name": "Sullivan's Island",
@@ -19,8 +23,12 @@ angular.module('gitNgbeachyApp')
                         "lng": -79.83778,
                         "message": "<a class='btn btn-default' href='#/beach/2'>Sullivan's Island Beach</a><br>",
                         "id":2,
-                        "image1":"images/beach-44.jpg",
-                        "image2":"images/beach-44.jpg"
+                        "image1":"images/sully-1.jpeg",
+                        "image2":"images/sully-2.jpeg",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         },
                         {
                         "name": "Folly Beach",
@@ -28,8 +36,12 @@ angular.module('gitNgbeachyApp')
                         "lng": -79.939213,
                         "message": "<a class='btn btn-default' href='#/beach/3'>Folly Beach</a>",
                         "id":3,
-                        "image1":"images/surfer-color.jpg",
-                        "image2":"images/beach-44.jpg"
+                        "image1":"images/folly-beach-surfing.jpg",
+                        "image2":"images/folly-peir.jpeg","amenities": "Showers, Lifeguards seasonal",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         },
                         {
                         "name": "North Myrtle Beach",
@@ -38,7 +50,11 @@ angular.module('gitNgbeachyApp')
                         "message": "<a class='btn btn-success' href='#/beach/4'>North Myrtle Beach</a>",
                         "id":4,
                         "image1":"images/myrtle-beach-sc-oceanfront-pier.jpeg",
-                        "image2":"images/beach-44.jpg"
+                        "image2":"images/beach-44.jpg",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         },
                         {
                         "name": "Edisto Beach",
@@ -47,7 +63,11 @@ angular.module('gitNgbeachyApp')
                         "message": "<a class='btn btn-success' href='#/beach/5'>Edisto Beach</a>",
                         "id":5,
                         "image1":"images/beach-entrance.jpeg",
-                        "image2":"images/beach-44.jpg"
+                        "image2":"images/beach-44.jpg",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         },
                         {
                         "name": "Surfside Beach",
@@ -56,7 +76,11 @@ angular.module('gitNgbeachyApp')
                         "message": "<a class='btn btn-success' href='#/beach/6'>Surfside Beach</a>",
                         "id":6,
                         "image1":"images/colored-umbrellas.jpg",
-                        "image2":"images/beach-44.jpg"
+                        "image2":"images/beach-44.jpg",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         },
                         {
                         "name": "Litchfield Beach",
@@ -65,7 +89,11 @@ angular.module('gitNgbeachyApp')
                         "message": "<a class='btn btn-success' href='#/beach/7'>Litchfield Beach</a>",
                         "id":7,
                         "image1":"images/white-beach-umbrellas.jpeg",
-                        "image2":"images/white-beach-umbrellas.jpeg"
+                        "image2":"images/white-beach-umbrellas.jpeg",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         },
                         {
                         "name": "Pawley's Island Beach",
@@ -74,7 +102,11 @@ angular.module('gitNgbeachyApp')
                         "message": "<a class='btn btn success' href='#/beach/8'>Pawley's Island Beach</a>",
                         "id":8,
                         "image1":"images/beach-44.jpg",
-                        "image2":"images/beach-44.jpg"
+                        "image2":"images/beach-44.jpg",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         },
                         {
                         "name": "Huntington Beach State Park",
@@ -83,7 +115,11 @@ angular.module('gitNgbeachyApp')
                         "message": "<a class='btn btn success' href='#/beach/9'>Huntington Beach State Park</a>",
                         "id":9,
                         "image1":"sands-beach-sunset-isla-vista.jpg",
-                        "image2":"images/beach-44.jpg"
+                        "image2":"images/beach-44.jpg",
+                        "parking": "Paid and residential available",
+                        "showers": "yes",
+                        "lifeguards": "no",
+                        "dogrules": "Dogs allowed on leash during summer beach hours"
                         }
                     
                          
