@@ -7,31 +7,21 @@
   <h6 class="text-muted">Beach Lover</h6>
 </div>
 
-<a class="btn btn-default" ng-href="#">Home</a>
 
-  <div class="row marketing col-lg-6">
-   
-    <h4>Beaching Time</h4>
+<div class="jumbotron">
+    <leaflet center="center" markers="markers" defaults="defaults"></leaflet></br>
 
-   <!--  <a class="btn btn-default" ng-click="addMarkers()">Show Me and Nearby Beaches</a> -->
+     <a type="button" class="btn btn-default btn-lg" ng-click="addMarkers()"><span class="glyphicon glyphicon-star"></span> Show Me & My Nearby Beaches</a>
 
-    <a type="button" class="btn btn-default btn-lg" ng-click="addMarkers()">
-    <span class="glyphicon glyphicon-star"></span> Show Me and My Nearby Beaches</a>
-   
-      <p>Here is you current location: {{center.lat}},{{center.lng}} </p>
-    
-  </div>
-  <div class="col-lg-6 marketing">
-
-    <leaflet center="center" markers="markers" defaults="defaults"></leaflet>
-      
-  </div>
-
-
-
-
-<div class="footer">
-  <p>♥ By Brooke Casey</p>
 </div>
+
+  <div class="marketing">
+     <!-- <a type="button" class="btn btn-default btn-lg" ng-click="addMarkers()">
+    <span class="glyphicon glyphicon-star"></span> Show Me and My Nearby Beaches</a> -->
+    <h4>Your current location is: {{center.lat}},{{center.lng}} </h4>
+  </div>
+<hr>
+  <p class="sig">♥ By Brooke Casey</p>
+
 
 </div>

@@ -48,13 +48,6 @@ h5 {
     font-size: 20px;
 }
 
-// .header-interior {
-//     margin-top: 0px, auto;
-//     padding: 0px;
-//     min-height: 200px;
-//     width:100%;
-// }
-
 .container-wide {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -100,8 +93,9 @@ h5 {
 }
 
 .angular-leaflet-map { 
-    min-height: 480px;
-    width:640px;
+    min-height: 300px;
+    width: 100%;
+    margin: 10px, auto;
 }
 
 .red {
@@ -218,7 +212,8 @@ body {
     .jumbotron {
         border-bottom: 0;
         background: url(../images/watercolor-footer.jpeg);
-        height: 400px;
+        min-height: 400px;
+        width: 100%;
     }
 }
 
