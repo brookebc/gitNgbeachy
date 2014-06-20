@@ -25,6 +25,10 @@ angular.module('gitNgbeachyApp', [
         templateUrl: 'views/detail.html',
         controller: 'LocationCtrl'
       })
+      .when('/about', {
+        templateUrl: 'views/road.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
