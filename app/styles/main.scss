@@ -10,11 +10,10 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     display: inline-block;
 }
 
+.weather-data {
+    font-size: 13px;
+}
 
-// .headliner {
-//     font-family: 'Luckiest Guy', cursive;
-//     font-size: 50px:
-// }
 .waves {
     background: url(../images/chs-beachy.png);
     height: 100px;
@@ -75,7 +74,7 @@ h5 {
 }
 
 .beachpic{
-    width:50%;
+    width:40%;
     margin: 0px, auto;
 }
 
@@ -214,6 +213,8 @@ body {
         background: url(../images/watercolor-footer.jpeg);
         min-height: 400px;
         width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #e5e5e5;
     }
 }
 
