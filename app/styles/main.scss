@@ -2,10 +2,13 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
-// .headline {
-    
-// }
+.jumbo {
+    color: #c1e79a;
+}
 
+.head {
+    min-height: 40%;
+}
 // .headliner {
 //     font-family: 'Luckiest Guy', cursive;
 //     font-size: 50px:
@@ -59,8 +62,9 @@ h5 {
    background-color: #fff6ea;
 }
 
-.weather-detail ul > li {
+.weather-detail > li {
     list-style-type: none;
+    text-decoration: none;
 }
 
 .beachpic{
