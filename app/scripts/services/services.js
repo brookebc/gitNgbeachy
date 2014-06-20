@@ -8,7 +8,7 @@ angular.module('gitNgbeachyApp')
                         "name": "Isle of Palm's Beach",
                         "lat": 32.79639,
                         "lng": -79.765,
-                        "message": "<a class='btn btn-default' href='#/beach/1'>IOP Beach</a>",
+                        "message": "<a class='btn btn' href='#/beach/1'>IOP Beach</a>",
                         "id":1,
                         "image":"images/beach-44.jpg"
                         },

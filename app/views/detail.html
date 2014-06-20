@@ -10,18 +10,10 @@
 <!-- <div class="white"> -->
 
     <h5>{{marker.name}}</h5>
-    <img class="beachpic" ng-src="{{marker.image}}"></img>   
+    <!-- <img class="beachpic" ng-src="{{marker.image}}"></img>    -->
 
-    <div class="container-fluid">
-
-      <div class="col-md-3 beach">
-        
-        <h4>Beach Details</h4>
-        <p>Beach Latitude: {{marker.lat}}</p>
-        <p>Beach Longitude: {{marker.lng}}</p>
-      </div>
-
-       <div class="col-md-3 beach">
+    <!-- <div class="container-fluid beachy-stuff"> -->
+       <div class="column1">
         <h4>Today's Forecast for: {{marker.name}}</h4>
           <ul class="weather-detail" ng-repeat="today in todaysweather" class="weather-data">
             <li><h4>@ Time: {{today.time}} (24/hr)</h4></li>
@@ -32,10 +24,17 @@
               <!--    <li><img class="beachy-feature" src="../images/b-wave.png"></img>Wave height: {{today.swellHeight_m}} (meters) </li> -->
             <!--  <li><img class="beachy-feature" src="../images/b-wave.png">Water temperature: {{today.waterTemp_F}}*</li> -->
           </ul>
-
+      </div>
+      
+       <div class="column2">
+        <!-- <h5>{{marker.name}}</h5> -->
+        <img class="beachpic" ng-src="{{marker.image}}"></img>  
+        <h4>Beach Details</h4>
+        <p>Beach Latitude: {{marker.lat}}</p>
+        <p>Beach Longitude: {{marker.lng}}</p>
       </div>
 
-    </div>
+   <!--  </div> -->
   
 
  <hr>

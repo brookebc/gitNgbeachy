@@ -10,13 +10,28 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding: 3px;
 }
 
+.greeny a {
+    background-color: #c1e79a;
+}
+
 // .beach-pic img {
 //     display: inline-block;
 //     float: right;
 // }
-// .beach-stuff > div {
-//     display: inline-block;
-// }
+.beach-stuff {
+    display: inline-block;
+}
+
+.column1 {
+    width:45%;
+    display: inline-block;
+}
+
+.column2 {
+    width:50%;
+    display: inline-block;
+    vertical-align: top;
+}
 
 // .beachy-feature img {
 //      border-radius: 120px;
@@ -100,7 +115,7 @@ h5 {
 }
 
 .beachpic{
-    width:40%;
+    width:65%;
     margin: 0px, auto;
 }
 
