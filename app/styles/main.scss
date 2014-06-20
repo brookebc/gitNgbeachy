@@ -6,9 +6,11 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     color: #c1e79a;
 }
 
-.head {
-    min-height: 40%;
+.front {
+    display: inline-block;
 }
+
+
 // .headliner {
 //     font-family: 'Luckiest Guy', cursive;
 //     font-size: 50px:
@@ -17,7 +19,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     background: url(../images/chs-beachy.png);
     height: 100px;
 }
-
 
 .beach-getter ul > li {
     font-family: 'Cuprum', sans-serif;
@@ -31,15 +32,28 @@ h6 {
 }
 h5 {
     font-family: 'Permanent Marker', cursive;
-    font-size: 30px;
+    font-size: 50px;
+    padding: 10px;
 }
 
-.header-interior {
-    margin-top: 0px, auto;
-    padding: 0px;
-    min-height: 200px;
-    width:100%;
+.sig {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    padding: 10px, auto, 20px, auto;
 }
+
+.some {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600px;
+    font-size: 20px;
+}
+
+// .header-interior {
+//     margin-top: 0px, auto;
+//     padding: 0px;
+//     min-height: 200px;
+//     width:100%;
+// }
 
 .container-wide {
     padding-top: 20px;
@@ -138,9 +152,14 @@ body {
 
 /* Custom page footer */
 .footer {
-    padding-top: 19px;
+    padding-top: 15px;
     color: #777;
     border-top: 1px solid #e5e5e5;
+    background: url(../images/watercolor-footer.jpeg);
+    min-height: 100px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
 }
 
 .container-narrow > hr {
@@ -148,12 +167,20 @@ body {
 }
 
 /* Main marketing message and sign up button */
-.jumbotron {
+// .jumbotron {
+//     text-align: center;
+//     border-bottom: 1px solid #e5e5e5;
+// }
+
+.beachlover {
+    // background: url(../images/beach-way.jpg);
+    background: url(../images/gulls-header.jpg);
+    background-position: 50px 250px;
+    // background-repeat: none;
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
-    background: url(../images/beach-way.jpg);
-    background-position: 50px 500px;
-    background-repeat: none;
+    height:150px;
+    width: 90%;
 }
 
 .jumbotron .btn {
@@ -190,7 +217,10 @@ body {
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
         border-bottom: 0;
+        background: url(../images/watercolor-footer.jpeg);
+        height: 400px;
     }
 }
+
 
 
