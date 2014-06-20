@@ -9,35 +9,43 @@
   </div>
 <!-- <div class="white"> -->
 
-    <h5>{{marker.name}}</h5>   
+    <h5>{{marker.name}}</h5>
+    <img class="beachpic" ng-src="{{marker.image}}"></img>   
 
-  <div class="row">
+    <div class="container-fluid">
 
-  <!-- <div class="row marketing"> -->
-    <div class="col-lg-5 front">
-        <img class="beachpic" ng-src="{{marker.image}}"></img>  
+      <div class="col-md-3 beach">
+        
         <h4>Beach Details</h4>
         <p>Beach Latitude: {{marker.lat}}</p>
         <p>Beach Longitude: {{marker.lng}}</p>
-        <!-- <p>{{marker.parking}}</p> -->    
-    </div>
+      </div>
 
-    <div class="col-lg-5 front weather-data"> 
-       <h4>Today's Forecast for: {{marker.name}}</h4>
-          <ul class="weather-detail" ng-repeat="today in todaysweather">
+       <div class="col-md-3 beach">
+        <h4>Today's Forecast for: {{marker.name}}</h4>
+          <ul class="weather-detail" ng-repeat="today in todaysweather" class="weather-data">
             <li><h4>@ Time: {{today.time}} (24/hr)</h4></li>
             <li>Humidity: {{today.humidity}}*</li>
             <li>Air temperature: {{today.tempF}}*</li>
             <li>Wave height: {{today.swellHeight_m}} (meters) </li>
             <li>Water temperature: {{today.waterTemp_F}}*</li>
+              <!--    <li><img class="beachy-feature" src="../images/b-wave.png"></img>Wave height: {{today.swellHeight_m}} (meters) </li> -->
+            <!--  <li><img class="beachy-feature" src="../images/b-wave.png">Water temperature: {{today.waterTemp_F}}*</li> -->
           </ul>
+
+      </div>
+
     </div>
+  
 
-
-
-
-  <hr>
-  <p class="sig">♥ By Brooke Casey</p>
+ <hr>
+  <div class="myfooter">
+    <ul>
+      <li><p class="sig">♥ By Brooke Casey</p></li>
+      <!-- <li><img src="../images/oceanfront_icon.png" class="lover"></img></li> -->
+  </ul>
+  
+</div>
 </div>
 <!-- </div> -->
 
