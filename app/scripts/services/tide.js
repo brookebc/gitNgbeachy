@@ -1,31 +1,10 @@
 'use strict';
- 
-angular.module('gitNgbeachyApp')
-  .controller('LocationCtrl', [ '$scope', '$location', '$http', '$routeParams', 'MarkersSvc',  function ($scope, $location, $http, $routeParams, MarkersSvc) {
-     
-    $scope.markersTest = MarkersSvc.getAll();
 
-    $scope.marker = MarkersSvc.findOne(Number($routeParams.id));
+angular.module('gitNgbeachyApp')	
+	.factory('TidesSvc', function($http) {
+         var getAll = function(){
 
-    $scope.weathermarker = MarkersSvc.findOne(Number($routeParams.id));
-    console.log($scope.weathermarker);
-
-    var marklat = $scope.weathermarker.lat;
-    var marklng = $scope.weathermarker.lng;
-
-    console.log(marklat);
-
-    console.log(marklng);
-
-    // console.log(weatherurl);
-
-   var weatherurl = "http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=" + marklat + ","+ marklng + "&format=json";
-
-    console.log(weatherurl);
-
-$scope.getWeather = function(weatherurl){
-
-        $http({method: 'GET', url: weatherurl }).
+         	$http({method: 'GET', url:'http://api.wunderground.com/api/a49e1180e24abdee/tide/q/SC/Charleston.json'}).
             success(function(data, status) {
             console.log('success!');
             console.log(data);
@@ -61,10 +40,5 @@ $scope.getWeather = function(weatherurl){
  
     };  
 
-$scope.getWeather(weatherurl); 
 
-
-
-
-}]);
-
+//http://api.wunderground.com/api/a49e1180e24abdee/tide/q/SC/Charleston.json

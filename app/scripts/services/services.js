@@ -10,7 +10,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -79.765,
                         "message": "<a class='btn btn' href='#/beach/1'>IOP Beach</a>",
                         "id":1,
-                        "image":"images/beach-44.jpg"
+                        "image1":"images/beach-44.jpg",
+                        "image2":"images/beach-44.jpg"
                         },
                         {
                         "name": "Sullivan's Island",
@@ -18,7 +19,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -79.83778,
                         "message": "<a class='btn btn-default' href='#/beach/2'>Sullivan's Island Beach</a><br>",
                         "id":2,
-                        "image":"images/beach-44.jpg"
+                        "image1":"images/beach-44.jpg",
+                        "image2":"images/beach-44.jpg"
                         },
                         {
                         "name": "Folly Beach",
@@ -26,7 +28,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -79.939213,
                         "message": "<a class='btn btn-default' href='#/beach/3'>Folly Beach</a>",
                         "id":3,
-                        "image":"images/beach-44.jpg"
+                        "image1":"images/surfer-color.jpg",
+                        "image2":"images/beach-44.jpg"
                         },
                         {
                         "name": "North Myrtle Beach",
@@ -34,7 +37,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -78.680974,
                         "message": "<a class='btn btn-success' href='#/beach/4'>North Myrtle Beach</a>",
                         "id":4,
-                        "image":"images/beach-44.jpg"
+                        "image1":"images/myrtle-beach-sc-oceanfront-pier.jpeg",
+                        "image2":"images/beach-44.jpg"
                         },
                         {
                         "name": "Edisto Beach",
@@ -42,7 +46,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -80.324402,
                         "message": "<a class='btn btn-success' href='#/beach/5'>Edisto Beach</a>",
                         "id":5,
-                        "image":"images/beach-44.jpg"
+                        "image1":"images/beach-entrance.jpeg",
+                        "image2":"images/beach-44.jpg"
                         },
                         {
                         "name": "Surfside Beach",
@@ -50,7 +55,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -78.973056,
                         "message": "<a class='btn btn-success' href='#/beach/6'>Surfside Beach</a>",
                         "id":6,
-                        "image":"images/beach-44.jpg"
+                        "image1":"images/colored-umbrellas.jpg",
+                        "image2":"images/beach-44.jpg"
                         },
                         {
                         "name": "Litchfield Beach",
@@ -58,7 +64,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -79.0997,
                         "message": "<a class='btn btn-success' href='#/beach/7'>Litchfield Beach</a>",
                         "id":7,
-                        "image":"images/beach-44.jpg"
+                        "image1":"images/white-beach-umbrellas.jpeg",
+                        "image2":"images/white-beach-umbrellas.jpeg"
                         },
                         {
                         "name": "Pawley's Island Beach",
@@ -66,7 +73,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -79.125,
                         "message": "<a class='btn btn success' href='#/beach/8'>Pawley's Island Beach</a>",
                         "id":8,
-                        "image":"images/beach-44.jpg"
+                        "image1":"images/beach-44.jpg",
+                        "image2":"images/beach-44.jpg"
                         },
                         {
                         "name": "Huntington Beach State Park",
@@ -74,7 +82,8 @@ angular.module('gitNgbeachyApp')
                         "lng": -79.0611,
                         "message": "<a class='btn btn success' href='#/beach/9'>Huntington Beach State Park</a>",
                         "id":9,
-                        "image":"images/beach-44.jpg"
+                        "image1":"sands-beach-sunset-isla-vista.jpg",
+                        "image2":"images/beach-44.jpg"
                         }
                     
                          
