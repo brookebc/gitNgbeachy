@@ -1,37 +1,35 @@
 'use strict';
  
 angular.module('gitNgbeachyApp')
-  .controller('LocationCtrl', [ '$scope', '$location', '$http', '$routeParams', 'MarkersSvc',  function ($scope, $location, $http, $routeParams, MarkersSvc) {
+  .controller('LocationCtrl', [ '$scope', '$location', '$http', '$routeParams', 'MarkersSvc', function ($scope, $location, $http, $routeParams, MarkersSvc) {
      
     $scope.markersTest = MarkersSvc.getAll();
 
     $scope.marker = MarkersSvc.findOne(Number($routeParams.id));
 
     $scope.weathermarker = MarkersSvc.findOne(Number($routeParams.id));
-    console.log($scope.weathermarker);
+    // console.log($scope.weathermarker);
 
     var marklat = $scope.weathermarker.lat;
     var marklng = $scope.weathermarker.lng;
 
-    console.log(marklat);
+    // console.log(marklat);
 
-    console.log(marklng);
-
-    // console.log(weatherurl);
+    // console.log(marklng);
 
    var weatherurl = "http://api.worldweatheronline.com/free/v1/marine.ashx?key=ab337e40b350996fe2070792b397287e7209e833&q=" + marklat + ","+ marklng + "&format=json";
 
-    console.log(weatherurl);
+    // console.log(weatherurl);
 
 $scope.getWeather = function(weatherurl){
 
         $http({method: 'GET', url: weatherurl }).
             success(function(data, status) {
-            console.log('success!');
-            console.log(data);
+            // console.log('success!');
+            // console.log(data);
 
             $scope.forecastdata = data;
-            console.log($scope.forecastdata);
+            // console.log($scope.forecastdata);
  
             // console.log($scope.forecastdata.data.weather[0].hourly);
  
@@ -39,16 +37,9 @@ $scope.getWeather = function(weatherurl){
             $scope.todaysdate = $scope.forecastdata.data.weather[0].date;
             // console.log($scope.todaysdate);
 
-            // var fixtime = $scope.forecastdata.data.weather[0].hourly.time;
-
-            // console.log(fixtime);
-
-            // $scope readytime = function (){
-
-
-            // };
-
-            
+            // console.log($scope.forecastdata.data.weather[0].hourly.time.weatherIconUrl.value);
+            // console.log($scope.todaysweather.time.weatherIconUrl.value);
+      
             console.log($scope.todaysweather);
  
             return $scope.todaysweather;
@@ -63,8 +54,9 @@ $scope.getWeather = function(weatherurl){
 
 $scope.getWeather(weatherurl); 
 
-
+$scope.theseTides;
 
 
 }]);
 
+// 'TidesSvc',
