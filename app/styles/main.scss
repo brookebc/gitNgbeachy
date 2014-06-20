@@ -2,6 +2,35 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
+// .headline {
+    
+// }
+
+// .headliner {
+//     font-family: 'Luckiest Guy', cursive;
+//     font-size: 50px:
+// }
+.waves {
+    background: url(../images/chs-beachy.png);
+    height: 100px;
+}
+
+
+.beach-getter ul > li {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 60px;
+}
+
+h6 {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    // color: 
+}
+h5 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+}
+
 .header-interior {
     margin-top: 0px, auto;
     padding: 0px;
@@ -9,22 +38,23 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     width:100%;
 }
 
-.container-wide{
+.container-wide {
     padding-top: 20px;
     padding-bottom: 20px;
     width:100%;
-    margin:0px 0px;
-    padding:0px 0px;
+    // margin:0px 0px;
+    // padding:0px 0px;
     background: url(../images/chs-beachy.png);
     background-repeat: none;
-    min-height:100px;
+    min-height:30%;
 }
 
 .gulls {
     background: url(../images/gulls-header.jpg);
-    // background-position: 50px 100px;
+    // background-position: 150px 100px;
     // background-repeat: none;
 }
+
 .white {
    background-color: #fff6ea;
 }
@@ -34,7 +64,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 }
 
 .beachpic{
-    width:70%;
+    width:50%;
     margin: 0px, auto;
 }
 
@@ -158,3 +188,5 @@ body {
         border-bottom: 0;
     }
 }
+
+
